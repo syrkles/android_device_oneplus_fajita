@@ -22,8 +22,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from fajita device
 $(call inherit-product, device/oneplus/fajita/device.mk)
 
-# Inherit some common Carbon stuff.
-$(call inherit-product, vendor/carbon/config/common_full_phone.mk)
+# Inherit Carbon GSM telephony parts
+$(call inherit-product, vendor/carbon/config/gsm.mk)
+
+# Inherit Carbon product configuration
+$(call inherit-product, vendor/carbon/config/common.mk)
 
 PRODUCT_NAME := carbon_fajita
 PRODUCT_DEVICE := fajita
